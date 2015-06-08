@@ -41,3 +41,5 @@
 
 #7. Count the number of occurrences of the word 'dictionary' (regardless of case) across all files in the DAT7 repo.
 	`grep -i "dictionary" ~/DAT7/* | wc -w`
+
+    There are ten instances of the word "dictionary"
