@@ -13,13 +13,13 @@
 
 #2. How many orders do there appear to be?
 
-	`tail chipotle.csv'
+	`tail chipotle.csv`
 
 	By looking at the tail for the dataset, we see the maximum order_id == 1834, which means there are 1834 unique orders in the dataset.
 
 #3. How many lines are in the file?
 
-	`wc -l chipotle.tsv'
+	`wc -l chipotle.tsv`
 
 	There are 4,623 lines in the file.
 
