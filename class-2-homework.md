@@ -1,13 +1,13 @@
 #1. The columns in this data set map to:
-	*order_id:* a unique identifier for an individual order. An order can have many items, therefore order_id is non-serial for this dataset.
+	**order_id:** a unique identifier for an individual order. An order can have many items, therefore order_id is non-serial for this dataset.
 
-	*quantity:* the count of a specific item in a specific order. For example, if a customer ordered two chicken burritos, the quantity would be "2" rather than adding an additional row for each burrito.
+	**quantity:** the count of a specific item in a specific order. For example, if a customer ordered two chicken burritos, the quantity would be "2" rather than adding an additional row for each burrito.
 
-	*item_name:* Simply the descriptive name of the item.
+	**item_name:** Simply the descriptive name of the item.
 
-	*choice_decription:* if the item_name has many variants, the choice_description reflects the specific selection. For example, A Nantucket Nectar can have many flavors, and therefore a value would be present in the choice_description field, however for "Chips" there are no choices, therefore the field is null.
+	**choice_decription:** if the item_name has many variants, the choice_description reflects the specific selection. For example, A Nantucket Nectar can have many flavors, and therefore a value would be present in the choice_description field, however for "Chips" there are no choices, therefore the field is null.
 
-	*item_price*: Equal to the price for each specific item, multiplied by quantity.
+	**item_price:** Equal to the price for each specific item, multiplied by quantity.
 
 	The rows in the dataset represent each individual item belonging to a particular order. There is one-to-many relationship between items and orders, such that each individual order can contain many items.
 
