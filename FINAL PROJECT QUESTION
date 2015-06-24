@@ -1,8 +1,0 @@
-##FINAL PROJECT QUESTION
-
-For my final project, I want to explore a topic regarding user behavior on WeddingWire.com. I primarily manage our consumer products, where we give users to tools and content to plan their weddings. WHile there are a number of different actions on WeddingWire that we find valuable, the most important action is users writing reviews for vendors after their wedding.
-
-The question I would like to answer is if we can predict which users are mostly likely to write reviews after their wedding based on their on-site behavior before their wedding. My thought is that if we can identify which activity models are most likely to lead to a user generating reviews, we can create automated marketing programs that support those paths. Inversely, if a users actions indicate they are unlikely to write a review, can we come up with a "second best" model that focuses on converting into a different action rather than expending all of our energy into a lost cause.
-
-To answer this question, I have assembled a data set by creating multiple tables in our data warehouse that tracks individual user actions and aggregates it into a row-level summary table. I have an included a sanitzed sample of 10 rows of the data (user ids are obfuscated). Currently there are 261K rows in the dataset. Other dimensions can be potentially added as well.
-
