@@ -35,7 +35,7 @@ users.index ## does not have parantheses because this is an attribute rather tha
 users.columns
 users.dtypes ##shows data types within table
 users.shape ##number of rows and columns as a tuple
-users.values ##underlying numby array
+users.values ##underlying numpy array
 
 ####SELECTING COLUMNS -- in python a column is called a Series
 users['gender'] #select single column
@@ -106,7 +106,7 @@ drinks.isnull().sum() ##COUNT NULLS FOR EACH SERIES IN DATAFRAME
 drinks.isnull().sum(axis=0) ##SUM DOWN THE COLUMN (DEFAULT)
 drinks.isnull().sum(axis=1) ##SUM ACROSS THE ROW
 
-##DROP MISSING VALUE
+##DROP MISSING VALUEw
 drinks.dropna() ##drops row if ANY value is missing
 drinks.dropna(how='all') ##drops a row only if ALL values are missing
 drinks.dropna(inplace=True) ##permanently drops from dataframe
@@ -115,4 +115,21 @@ drinks.dropna(inplace=True) ##permanently drops from dataframe
 drinks.continent.fillna(value='NA') ##Replaces null value with NA
 drinks.continent.fillna(value='NA', inplace=True) ##permanently replaces null
 
+##UFO EXCERCISES
+import pandas
+ufo = pd.read_csv('ufo.csv')
+ufo.shape
+ufo['Colors Reported'].value_counts()
 
+#REPLACE SPACES IN COLUMN NAMES
+[col.replace(' ','_') for col in ufo.columns] #write list comprehension to programatically remove spaces
+#for reports in VA, what is the the most common city
+ufo[ufo.State == 'VA'].City.value_counts().head(1)
+#print dataframe from all reports in alexandria, va
+ufo[(ufo.City == 'Alexandria') & (ufo.State == 'VA')]
+
+#count number of null values from each column
+ufo.isnull().sum()
+
+#how many rows will dropping null leave?
+ufo.isnull().shape
